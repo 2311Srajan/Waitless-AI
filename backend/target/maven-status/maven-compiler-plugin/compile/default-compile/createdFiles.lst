@@ -1,0 +1,8 @@
+com/waitless/api/controller/LocationController.class
+com/waitless/api/controller/PredictController.class
+com/waitless/api/service/LocationService.class
+com/waitless/api/model/PredictRequest.class
+com/waitless/api/model/PredictResponse.class
+com/waitless/api/controller/PredictController$1.class
+com/waitless/api/WaitlessApplication.class
+com/waitless/api/model/Location.class
