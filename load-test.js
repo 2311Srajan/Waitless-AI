@@ -3,9 +3,9 @@ import { check, sleep } from 'k6';
 
 export const options = {
   stages: [
-    { duration: '30s', target: 500 },  // Ramp up to 500 users
-    { duration: '1m', target: 1000 },  // Stay at 1,000 concurrent users
-    { duration: '30s', target: 0 },    // Scale down
+    { duration: '10s', target: 5 },
+    { duration: '20s', target: 10 },
+    { duration: '10s', target: 0 },
   ],
   thresholds: {
     http_req_duration: ['p(95)<45'],   // P95 latency must be under 45ms

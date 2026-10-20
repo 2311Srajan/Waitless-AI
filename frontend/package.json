@@ -1,1 +1,1 @@
-{"scripts":{"dev":"vite --host 0.0.0.0"},"dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest"},"devDependencies":{}}
+{"scripts":{"dev":"vite --host 0.0.0.0"},"dependencies":{"@stomp/stompjs":"^7.4.0","@vitejs/plugin-react":"latest","global":"^4.4.0","react":"latest","react-dom":"latest","sockjs-client":"^1.6.1"},"devDependencies":{"vite":"^8.3.4"}}

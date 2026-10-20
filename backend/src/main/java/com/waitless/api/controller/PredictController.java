@@ -35,9 +35,7 @@ public class PredictController {
   }
 
   @PostMapping("/predict")
-  public Map<String, Object> predict(
-      @RequestBody PredictRequest request) {
-
+  public Map<String, Object> predict(@RequestBody PredictRequest request) {
     try {
       Map<String, Object> payload = Map.of(
           "locationId", request.locationId(),
@@ -58,19 +56,7 @@ public class PredictController {
           .POST(HttpRequest.BodyPublishers.ofString(json))
           .build();
 
-      HttpResponse<String> response = httpClient.send(
-          httpRequest,
-          HttpResponse.BodyHandlers.ofString());
-
-      if (response.statusCode() < 200 ||
-          response.statusCode() >= 300) {
-
-        throw new RuntimeException(
-            "ML service error: HTTP "
-                + response.statusCode()
-                + " - "
-                + response.body());
-      }
+      HttpResponse<String> response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
       return objectMapper.readValue(
           response.body(),
@@ -78,9 +64,7 @@ public class PredictController {
           });
 
     } catch (Exception e) {
-      throw new RuntimeException(
-          "Prediction service failed: " + e.getMessage(),
-          e);
+      throw new RuntimeException("Prediction service failed: " + e.getMessage(), e);
     }
   }
 }

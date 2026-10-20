@@ -1,0 +1,45 @@
+# Dependencies
+frontend/node_modules/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Local data and backups
+ml-service/data/
+*.csv.bak
+
+# OS and editor
+.DS_Store
+.vscode/
+
+# Java build output
+backend/target/
+**/target/
+*.java.bak
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Local secrets, dependencies, caches and build artifacts
+.env
+**/.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+frontend/node_modules/
+frontend/dist/
+backend/target/
+**/target/
